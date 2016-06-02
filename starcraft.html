@@ -14,9 +14,8 @@
 			</tr>
 			</thead>
 			<tbody>
-			<tr >
-				<td ng-repeat='playerData in star.startData.data'>{{playerData[0]}} </td>
-				
+			<tr ng-repeat='row in star.starData.data'>
+				<td ng-repeat='playerData in row'>{{playerData}}</td>
 			</tr>
 			</tbody>
 		</table>

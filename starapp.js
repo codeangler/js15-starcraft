@@ -10,6 +10,6 @@ function starCtrl($http) {
 		starCtrl.starData = res;
 		// console.log(res.cols);
 		// console.log(res.data);
-		console.log(starCtrl.starData.data.$index)
+		console.log(starCtrl.starData.data)
 	})
 }
