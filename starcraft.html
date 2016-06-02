@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myStarApp">
+<head>
+	<title>Star Craft Ranking Project</title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="starapp.js"></script>
+</head>
+<body>
+	<div class="container" ng-controller="StarController as star">
+		<table>
+			<thead>
+			<tr>
+				<th ng-repeat='itemHeading in star.starData.cols'> {{ itemHeading}}</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr >
+				<td ng-repeat='playerData in star.startData.data'>{{playerData[0]}} </td>
+				
+			</tr>
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>
