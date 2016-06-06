@@ -1,4 +1,4 @@
-angular.module('myStarApp', [])
+angular.module('myStarApp', ['ui.bootstrap'])
 angular.module('myStarApp')
 angular.module('myStarApp')
 	.controller('StarController',['$http', starCtrl])
