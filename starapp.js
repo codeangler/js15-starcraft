@@ -1,5 +1,5 @@
 angular.module('myStarApp', ['ui.bootstrap'])
-angular.module('myStarApp')
+
 angular.module('myStarApp')
 	.controller('StarController',['$http', starCtrl])
 
@@ -21,10 +21,7 @@ angular.module('myStarApp')
 angular.module('myStarApp')
 .controller('PaginationDemoCtrl', function ($scope, $log) {
   $scope.viewby = 10;
-  $scope.totalItems = starCtrl.starData.data.length;
-  $scope.currentPage = 4;
-  $scope.itemsPerPage = $scope.viewby;
-  $scope.maxSize = 5; //Number of pager buttons to show
+  
 
   $scope.setPage = function (pageNo) {
     $scope.currentPage = pageNo;
