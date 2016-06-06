@@ -5,6 +5,8 @@
 	<script type="text/javascript" src="angular.js"></script>
 	<script type="text/javascript" src="ui-bootstrap-tpls-1.3.3.min.js"></script>
 	<script type="text/javascript" src="starapp.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
 	<div class="container" ng-controller="StarController as star">
@@ -20,9 +22,10 @@
 			</tr>
 			</tbody>
 		</table>
-	<footer ng-controller="PaginationCtrl">
-		
-	</footer>
+		<div ng-controller="PaginationDemoCtrl">
+		    <h4>Default</h4>
+		    <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
+		</div>
 	</div>
 </body>
 </html>
