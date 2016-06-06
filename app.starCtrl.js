@@ -7,9 +7,9 @@ angular.module('myStarApp')
 		var starCtrl = this;
 		starCtrl.accessData = StarFactory.then(function(resp){
 			starCtrl.starData = resp.data;
-			console.log(starCtrl.starData);
-			console.log(starCtrl.starData.cols);
-			console.log(starCtrl.starData.data);
+			// console.log(starCtrl.starData);
+			// console.log(starCtrl.starData.cols);
+			console.log("from starCtl", starCtrl.starData.data.length);
 
 		})
 	}
