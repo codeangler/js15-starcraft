@@ -11,7 +11,7 @@
 <body>
 	<div class="container" ng-controller="StarController as star">
 		
-		<div ng-controller="PaginationDemoCtrl">
+		
 			<table>
 				<thead>
 					<tr>
@@ -19,12 +19,12 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat='row in star.starData.data.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))'>
+					<tr ng-repeat='row in star.starData.data'>
 						<td ng-repeat='playerData in row'>{{playerData}}</td>
 					</tr>
 				</tbody>
 			</table>
-		
+			<div ng-controller="PaginationDemoCtrl">
 		    <h4>Default</h4>
 		    <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
 		    View <select ng-model="viewby" ng-change="setItemsPerPage(viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
