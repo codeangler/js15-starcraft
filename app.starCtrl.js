@@ -4,8 +4,12 @@ angular.module('myStarApp')
 	starCtrl.$inject = ['StarFactory'];
 
 	function starCtrl(StarFactory) {
-		StarFactory.then(function(resp){
-			console.log("hi from StarCtrl", resp.data.cols);
+		var starCtrl = this;
+		starCtrl.accessData = StarFactory.then(function(resp){
+			starCtrl.starData = resp.data;
+			console.log(starCtrl.starData);
+			console.log(starCtrl.starData.cols);
+			console.log(starCtrl.starData.data);
 
 		})
 	}
