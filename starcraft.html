@@ -5,7 +5,7 @@
 	<script type="text/javascript" src="angular.js"></script>
 	<script type="text/javascript" src="ui-bootstrap-tpls-1.3.3.min.js"></script>
 	<script type="text/javascript" src="starapp.js"></script>
-	
+	<script type="text/javascript" src="app.paginationCtrl.js"></script>
 	<script type="text/javascript" src="app.starCtrl.js"></script>
 	<script type="text/javascript" src="app.starFactory.js"></script>
 
@@ -20,11 +20,11 @@
 		<table>
 			<thead>
 				<tr>
-					<th ng-repeat='itemHeading in star.starData.cols'> {{ itemHeading}}</th>
+					<th ng-repeat='itemHeading in star.resp.data.cols'> {{ itemHeading}}</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat='row in star.starData.data'>
+				<tr ng-repeat='row in star.resp.data.data'>
 					<td ng-repeat='playerData in row'>{{playerData}}</td>
 				</tr>
 			</tbody>

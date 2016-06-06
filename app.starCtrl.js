@@ -1,8 +1,11 @@
 angular.module('myStarApp')
-	.controller('StarController',starCtrl)
+	.controller('StarController', starCtrl)
 
-	starCtrl.$inject = ['StarFactory']
+	starCtrl.$inject = ['StarFactory'];
 
-	function starCtrl() {
-		console.log('star controller');
+	function starCtrl(StarFactory) {
+		StarFactory.then(function(resp){
+			console.log("hi from StarCtrl", resp.data.cols);
+
+		})
 	}
