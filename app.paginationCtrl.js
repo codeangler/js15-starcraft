@@ -7,10 +7,10 @@ angular.module('myStarApp')
       pagiCtrl.currentPage = 4;
       pagiCtrl.itemsPerPage = pagiCtrl.viewby;
       pagiCtrl.maxSize = 5; //Number of pager buttons to show
+     
       pagiCtrl.setPage = function (pageNo) {
              pagiCtrl.currentPage = pageNo;
       }
-
 
       pagiCtrl.pageChanged = function() {
           console.log('Page changed to: ' + pagiCtrl.currentPage);
@@ -27,5 +27,7 @@ angular.module('myStarApp')
         // console.log("from pagiCtrl", pagiCtrl.starData.data.length);
         pagiCtrl.totalItems = pagiCtrl.starData.data.length;
       })
+
+      
 
       }
