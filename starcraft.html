@@ -30,22 +30,17 @@
       </table>
     </main> -->
     <div class="container table-responsive" ng-controller="PaginationDemoCtrl as pagi">
-    <h1>{{pagi.starData.data.length}}</h1>
-    <h2>{{pagi.viewby}}</h2>
-    <h2>currentPage{{pagi.currentPage}}</h2>
-    <h2>pagi.itemsPerPage {{pagi.itemsPerPage}}</h2>
-    <h3>{{pagi.totalItems}}</h3>
-      <table class="table table-striped">
-        <thead class="reverse">
-          <tr>
-            <th ng-repeat='itemHeading in pagi.starData.cols'> {{ itemHeading}}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat='row in pagi.starData.data'>
-            <td ng-repeat='playerData in row'>{{playerData}}</td>
-          </tr>
-        </tbody>
+     <table class="table table-striped">
+      <thead class="reverse">
+        <tr>
+          <th ng-repeat='itemHeading in pagi.starData.cols'> {{ itemHeading}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='row in pagi.starData.data.slice(((pagi.currentPage-1)*pagi.itemsPerPage), ((pagi.currentPage)*pagi.itemsPerPage))'>
+          <td ng-repeat='playerData in row'>{{playerData}}</td>
+        </tr>
+      </tbody>
       </table>
 
 
