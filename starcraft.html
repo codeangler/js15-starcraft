@@ -12,8 +12,8 @@
 
 </head>
 <body>
-	<div class="container" ng-controller="StarController as star">
-		
+<!-- 	<div class="container" ng-controller="StarController as star">
+ -->		
 		
 	<!-- 	<main>
 			<table>
@@ -29,9 +29,9 @@
 				</tbody>
 			</table>
 		</main> -->
-		<div ng-controller="PaginationDemoCtrl as pagi">
+		<div class="container table-responsive" ng-controller="PaginationDemoCtrl as pagi">
 			<table class="table table-striped">
-				<thead>
+				<thead class="reverse">
 					<tr>
 						<th ng-repeat='itemHeading in pagi.starData.cols'> {{ itemHeading}}</th>
 					</tr>
@@ -48,6 +48,6 @@
 		    View <select ng-model="viewby" ng-change="setItemsPerPage(viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
  -->
 		</div>
-	</div>
+	<!-- /div> -->
 </body>
 </html>
