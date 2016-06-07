@@ -48,14 +48,23 @@
         </tbody>
       </table>
 
-        <h4>Default</h4>
-        <uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></uib-pagination>
-        View <select ng-model="viewby" ng-change="setItemsPerPage(viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
 
-        <h4>Limit the maximum visible buttons</h4>
-      <pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" items-per-page="itemsPerPage"></pagination>
-     <pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages" items-per-page="itemsPerPage"></pagination>
-      <pre>Page: {{currentPage}} / {{numPages}}</pre>
+
+    View <select ng-model="pagi.viewby" ng-change="pagi.setItemsPerPage(pagi.viewby)"><option>3</option><option>5</option><option>10</option><option>20</option><option>30</option><option>40</option><option>50</option></select> records at a time.
+
+    <pagination total-items="pagi.totalItems" ng-model="pagi.currentPage" ng-change="pagi.pageChanged()" class="pagination-sm" items-per-page="pagi.itemsPerPage"></pagination>
+    <pre>The selected page no: {{pagi.currentPage}}</pre>
+    <button class="btn btn-info" ng-click="pagi.setPage(3)">Set current page to: 3</button>
+
+    <hr />
+    <h4>Pager</h4>
+    <pager total-items="pagi.totalItems" ng-model="pagi.currentPage" items-per-page="pagi.itemsPerPage"></pager>
+
+    <hr />
+    <h4>Limit the maximum visible buttons</h4>
+    <pagination total-items="pagi.totalItems" ng-model="pagi.currentPage" max-size="pagi.maxSize" class="pagination-sm" boundary-links="true" items-per-page="pagi.itemsPerPage"></pagination>
+    <pagination total-items="pagi.totalItems" ng-model="pagi.currentPage" max-size="pagi.maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="pagi.numPages" items-per-page="pagi.itemsPerPage"></pagination>
+    <pre>Page: {{pagi.currentPage}} / {{pagi.numPages}}</pre>
     </div>
   <!-- /div> -->
 </body>
